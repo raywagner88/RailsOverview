@@ -339,3 +339,7 @@ There's a very popular gem available called Devise that implements a secure auth
 In this case you'll want to follow the setup guide to add Devise Token Auth to our api as well as create migrations to reference comments and posts to the user.
 
 Good luck, I'm always available on Slack to answer questions.
+
+PS I highly recommend reading the Rails guides on topics I didn't cover here. Rails is very opinionated so theres always a "Rails Way" to do something.
+
+https://guides.rubyonrails.org/index.html
