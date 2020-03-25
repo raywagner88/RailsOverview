@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.by_post(params[:post_id])
+    @comments = Comment.by_post(params[:post_id]).by_user(params[:user_id])
   end
 
   # GET /comments/1
@@ -48,6 +48,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:post_id, :content)
+      params.require(:comment).permit(:post_id, :content, :user_id)
     end
 end

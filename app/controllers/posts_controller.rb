@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.by_user(params[:user_id])
   end
 
   # GET /posts/1
@@ -48,6 +48,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :user_id)
     end
 end
